@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run copy-vercel",
-    "copy-vercel": "node -e \"const fs=require('fs'); fs.copyFileSync('vercel.json','dist/vercel.json'); console.log('vercel.json copied');\"",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
