@@ -9,6 +9,7 @@
   import Galeria from "./pages/Galeria.svelte";
   import Divertido from "./pages/Divertido.svelte";
   import Favoritos from "./pages/Favoritos.svelte";
+  import About from "./pages/About.svelte";
 </script>
 
 <Router>
@@ -23,6 +24,7 @@
       <Route path="/galeria" component={Galeria} />
       <Route path="/divertido" component={Divertido} />
       <Route path="/favoritos" component={Favoritos} />
+      <Route path="/about" component={About} />
     </main>
     <Footer />
   </div>
