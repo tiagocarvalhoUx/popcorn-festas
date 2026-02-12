@@ -133,7 +133,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {#each tiposEvento as tipo}
             <button
-              class="p-6 rounded-2xl border-2 text-left transition-all transform hover:scale-105 {eventoBuilder.tipoEvento === tipo.id ? 'border-popcorn-red bg-red-50' : 'border-gray-200 hover:border-popcorn-yellow'}"
+              class="p-6 rounded-2xl border-2 text-left transition-all transform hover:scale-105 {$eventoBuilder.tipoEvento === tipo.id ? 'border-popcorn-red bg-red-50' : 'border-gray-200 hover:border-popcorn-yellow'}"
               on:click={() => setTipoEvento(tipo.id)}
             >
               <div class="flex items-start space-x-4">
@@ -200,7 +200,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {#each temas as tema}
             <button
-              class="relative rounded-2xl overflow-hidden transition-all transform hover:scale-105 {eventoBuilder.tema === tema.id ? 'ring-4 ring-popcorn-red' : ''}"
+              class="relative rounded-2xl overflow-hidden transition-all transform hover:scale-105 {$eventoBuilder.tema === tema.id ? 'ring-4 ring-popcorn-red' : ''}"
               on:click={() => setTema(tema.id)}
             >
               <img src={tema.imagem} alt={tema.nome} class="w-full h-48 object-cover" />
@@ -210,7 +210,7 @@
                   <p class="text-sm opacity-90">{tema.descricao.slice(0, 60)}...</p>
                 </div>
               </div>
-              {#if eventoBuilder.tema === tema.id}
+              {#if $eventoBuilder.tema === tema.id}
                 <div class="absolute top-4 right-4 bg-popcorn-red text-white w-8 h-8 rounded-full flex items-center justify-center">
                   ✓
                 </div>
